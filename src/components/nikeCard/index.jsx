@@ -2,7 +2,7 @@ import { motion, useMotionValue, useTransform } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
-import AirJordanImg from "../../assets/images/air-jordan-transparent.png";
+import Naseateryimg from "../../assets/images/nas-eatery.png";
 import { ShoesDetails } from "./shoesDetails";
 
 const CardWrapper = styled.div`
@@ -14,7 +14,7 @@ const CardWrapper = styled.div`
 `;
 
 const CardContainer = styled(motion.div)`
-  width: 285px;
+  width: 500px;
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@ const Circle = styled.div`
   top: -4.2em;
   right: -10em;
   z-index: 5;
-  background-color: #fbbe01;
+  background-color: #2b3289;
   border-radius: 50%;
 `;
 
@@ -64,7 +64,7 @@ const BottomContainer = styled.div`
   padding: 0 1em;
 `;
 
-const NikeText = styled.h1`
+const NasEateryText = styled.h1`
   color: #fff;
   text-transform: uppercase;
   margin: 0;
@@ -87,7 +87,6 @@ const Shoes = styled(motion.div)`
   height: 190px;
   z-index: 99;
   user-select: none;
-  margin-right: 3em;
   margin-top: 4em;
 
   img {
@@ -118,15 +117,15 @@ export function NikeCard(props) {
           </CircleWrapper>
           <ShoesWrapper>
             <Shoes
-              style={{ x, y, rotateX, rotateY, rotate: "-25deg", z: 100000 }}
+              style={{ x, y, rotateX, rotateY, rotate: "0", z: 100000 }}
               drag
               dragElastic={0.12}
               whileTap={{ cursor: "grabbing" }}
             >
-              <img src={AirJordanImg} />
+              <img src={Naseateryimg} />
             </Shoes>
           </ShoesWrapper>
-          <NikeText>NIKE AIR</NikeText>
+          <NasEateryText>NAS EATERY</NasEateryText>
         </TopContainer>
         <BottomContainer>
           <ShoesDetails />

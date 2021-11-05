@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Marginer } from "../marginer";
 
-import NikeImg from "../../assets/images/nike-logo.png";
+import naseaterylogo from "../../assets/images/ne-logo.png";
 
 const DetailsContainer = styled.div`
   width: 100%;
@@ -34,10 +34,10 @@ const SpacedHorizontalContainer = styled.div`
   align-items: center;
 `;
 
-const BuyButton = styled.button`
+const BuyButton = styled.a`
   padding: 10px 16px;
-  background-color: #fbbe01;
-  color: #000;
+  background-color: #2b3289;
+  color: #FFF;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 700;
@@ -46,15 +46,16 @@ const BuyButton = styled.button`
   cursor: pointer;
   transition: all 290ms ease-in-out;
   border-radius: 8px;
-
+  href:https://naseatery.menubn.com;
   &:hover {
     background-color: transparent;
     color: #fff;
-    border: 3px solid #fbbe01;
+    border: 3px solid #2b3289;
   }
+
 `;
 
-const NikeLogo = styled.div`
+const naslogo = styled.div`
   width: 100%;
   height: 30px;
   display: flex;
@@ -70,19 +71,17 @@ const NikeLogo = styled.div`
 export function ShoesDetails(props) {
   return (
     <DetailsContainer>
-      <SmallText>NIKE</SmallText>
+      <SmallText>International Cuisine</SmallText>
       <SpacedHorizontalContainer>
-        <MediumText>AIR JORDAN 1 MID SE GC</MediumText>
-        <MediumText>¥856</MediumText>
+        <MediumText>Nas Eatery Restaurant</MediumText>
+        <MediumText></MediumText>
       </SpacedHorizontalContainer>
       <Marginer direction="vertical" margin="1.2em" />
       <SpacedHorizontalContainer>
-        <MediumText>YOUR NEXT SHOES</MediumText>
-        <BuyButton>BUY</BuyButton>
+        <MediumText>Make a Call or Whatsapp</MediumText>
+        <BuyButton href="https://wa.me/6738345703">ORDER</BuyButton>
       </SpacedHorizontalContainer>
-      <NikeLogo>
-        <img src={NikeImg} />
-      </NikeLogo>
+
     </DetailsContainer>
   );
 }
